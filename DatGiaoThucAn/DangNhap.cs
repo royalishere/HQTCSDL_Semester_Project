@@ -29,7 +29,9 @@ namespace DatGiaoThucAn
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            DangKy form_signup = new DangKy();
+            form_signup.StartPosition = FormStartPosition.CenterParent;
+            form_signup.ShowDialog();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace DatGiaoThucAn
 
         private void button3_MouseClick(object sender, MouseEventArgs e)
         {
-
+            Application.Run(new DangKy());
         }
     }
 }
