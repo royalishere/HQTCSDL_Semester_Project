@@ -58,7 +58,7 @@ namespace DatGiaoThucAn
 
         private void button3_MouseClick(object sender, MouseEventArgs e)
         {
-            Application.Run(new DangKy());
+
         }
     }
 }
