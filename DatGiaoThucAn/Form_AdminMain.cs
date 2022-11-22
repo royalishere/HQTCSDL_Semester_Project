@@ -46,5 +46,10 @@ namespace DatGiaoThucAn
         {
 
         }
+
+        private void form_TaiKhoan_Ad1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

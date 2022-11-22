@@ -31,8 +31,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_TaiKhoan = new System.Windows.Forms.Button();
             this.bt_DSTaiKhoan = new System.Windows.Forms.Button();
-            this.form_dsTaiKhoan1 = new DatGiaoThucAn.Form_DSTaiKhoan();
             this.form_TaiKhoan_Ad1 = new DatGiaoThucAn.Form_TaiKhoan_Ad();
+            this.form_dsTaiKhoan1 = new DatGiaoThucAn.Form_DSTaiKhoan();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,28 +75,28 @@
             this.bt_DSTaiKhoan.UseVisualStyleBackColor = true;
             this.bt_DSTaiKhoan.Click += new System.EventHandler(this.bt_DSTaiKhoan_Click);
             // 
-            // form_dsTaiKhoan1
-            // 
-            this.form_dsTaiKhoan1.Location = new System.Drawing.Point(185, -1);
-            this.form_dsTaiKhoan1.Name = "form_dsTaiKhoan1";
-            this.form_dsTaiKhoan1.Size = new System.Drawing.Size(1080, 850);
-            this.form_dsTaiKhoan1.TabIndex = 3;
-            // 
             // form_TaiKhoan_Ad1
             // 
-            this.form_TaiKhoan_Ad1.Location = new System.Drawing.Point(185, 0);
+            this.form_TaiKhoan_Ad1.Location = new System.Drawing.Point(186, 0);
             this.form_TaiKhoan_Ad1.Name = "form_TaiKhoan_Ad1";
             this.form_TaiKhoan_Ad1.Size = new System.Drawing.Size(1080, 850);
-            this.form_TaiKhoan_Ad1.TabIndex = 4;
-            this.form_TaiKhoan_Ad1.Load += new System.EventHandler(this.form_TaiKhoan_Ad_Load);
+            this.form_TaiKhoan_Ad1.TabIndex = 1;
+            this.form_TaiKhoan_Ad1.Load += new System.EventHandler(this.form_TaiKhoan_Ad1_Load);
+            // 
+            // form_dsTaiKhoan1
+            // 
+            this.form_dsTaiKhoan1.Location = new System.Drawing.Point(186, 0);
+            this.form_dsTaiKhoan1.Name = "form_dsTaiKhoan1";
+            this.form_dsTaiKhoan1.Size = new System.Drawing.Size(1080, 850);
+            this.form_dsTaiKhoan1.TabIndex = 2;
             // 
             // Form_AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 853);
-            this.Controls.Add(this.form_TaiKhoan_Ad1);
             this.Controls.Add(this.form_dsTaiKhoan1);
+            this.Controls.Add(this.form_TaiKhoan_Ad1);
             this.Controls.Add(this.panel1);
             this.Name = "Form_AdminMain";
             this.Text = "Admin";
@@ -110,7 +110,7 @@
         private Panel panel1;
         private Button bt_DSTaiKhoan;
         private Button bt_TaiKhoan;
-        private Form_DSTaiKhoan form_dsTaiKhoan1;
         private Form_TaiKhoan_Ad form_TaiKhoan_Ad1;
+        private Form_DSTaiKhoan form_dsTaiKhoan1;
     }
 }

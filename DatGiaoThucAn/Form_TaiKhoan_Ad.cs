@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DatGiaoThucAn
 {
@@ -28,6 +29,11 @@ namespace DatGiaoThucAn
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_TaiKhoan_Ad_Load(object sender, EventArgs e)
         {
 
         }

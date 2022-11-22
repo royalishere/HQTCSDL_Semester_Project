@@ -53,7 +53,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(373, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 40);
+            this.label1.Size = new System.Drawing.Size(319, 38);
             this.label1.TabIndex = 2;
             this.label1.Text = "Thông tin tài khoản";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -217,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form_TaiKhoan_Ad";
             this.Size = new System.Drawing.Size(1080, 850);
+            this.Load += new System.EventHandler(this.Form_TaiKhoan_Ad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
