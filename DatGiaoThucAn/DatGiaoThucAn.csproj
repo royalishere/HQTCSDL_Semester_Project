@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Form_DSTaiKhoan.cs">
+    <Compile Update="Admin\Form_DSTaiKhoan.cs">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">

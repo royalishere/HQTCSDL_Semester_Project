@@ -42,6 +42,7 @@
             this.MatKhau = new System.Windows.Forms.ColumnHeader();
             this.LoaiTK = new System.Windows.Forms.ColumnHeader();
             this.TrangThai = new System.Windows.Forms.ColumnHeader();
+            this.bt_updateData = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -108,13 +109,12 @@
             this.label4.Size = new System.Drawing.Size(91, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Mật khẩu";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // bt_AddUser
             // 
-            this.bt_AddUser.Location = new System.Drawing.Point(474, 291);
+            this.bt_AddUser.Location = new System.Drawing.Point(636, 289);
             this.bt_AddUser.Name = "bt_AddUser";
-            this.bt_AddUser.Size = new System.Drawing.Size(184, 39);
+            this.bt_AddUser.Size = new System.Drawing.Size(199, 44);
             this.bt_AddUser.TabIndex = 8;
             this.bt_AddUser.Text = "Thêm tài khoản";
             this.bt_AddUser.UseVisualStyleBackColor = true;
@@ -163,10 +163,21 @@
             this.TrangThai.Text = "TrangThai";
             this.TrangThai.Width = 150;
             // 
+            // bt_updateData
+            // 
+            this.bt_updateData.Location = new System.Drawing.Point(305, 289);
+            this.bt_updateData.Name = "bt_updateData";
+            this.bt_updateData.Size = new System.Drawing.Size(199, 44);
+            this.bt_updateData.TabIndex = 10;
+            this.bt_updateData.Text = "Update Data";
+            this.bt_updateData.UseVisualStyleBackColor = true;
+            this.bt_updateData.Click += new System.EventHandler(this.bt_updateData_Click);
+            // 
             // Form_DSTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bt_updateData);
             this.Controls.Add(this.lv_DSTaiKhoan);
             this.Controls.Add(this.bt_AddUser);
             this.Controls.Add(this.label4);
@@ -199,5 +210,6 @@
         private ColumnHeader MatKhau;
         private ColumnHeader LoaiTK;
         private ColumnHeader TrangThai;
+        private Button bt_updateData;
     }
 }
