@@ -36,7 +36,7 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_udPass = new System.Windows.Forms.Button();
             this.ad_username = new System.Windows.Forms.Label();
             this.ad_pass = new System.Windows.Forms.Label();
             this.update_pass = new System.Windows.Forms.Label();
@@ -107,14 +107,14 @@
             this.textBox7.Size = new System.Drawing.Size(190, 27);
             this.textBox7.TabIndex = 9;
             // 
-            // button1
+            // bt_udPass
             // 
-            this.button1.Location = new System.Drawing.Point(262, 581);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 29);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_udPass.Location = new System.Drawing.Point(262, 581);
+            this.bt_udPass.Name = "bt_udPass";
+            this.bt_udPass.Size = new System.Drawing.Size(190, 29);
+            this.bt_udPass.TabIndex = 10;
+            this.bt_udPass.Text = "cập nhật mật khẩu";
+            this.bt_udPass.UseVisualStyleBackColor = true;
             // 
             // ad_username
             // 
@@ -206,7 +206,7 @@
             this.Controls.Add(this.update_pass);
             this.Controls.Add(this.ad_pass);
             this.Controls.Add(this.ad_username);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_udPass);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -233,7 +233,7 @@
         private TextBox textBox5;
         private TextBox textBox6;
         private TextBox textBox7;
-        private Button button1;
+        private Button bt_udPass;
         private Label ad_username;
         private Label ad_pass;
         private Label update_pass;

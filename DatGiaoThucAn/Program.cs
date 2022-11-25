@@ -1,3 +1,5 @@
+using DatGiaoThucAn.NhanVien;
+
 namespace DatGiaoThucAn
 {
     internal static class Program
@@ -12,7 +14,8 @@ namespace DatGiaoThucAn
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new DangNhap());
-            Application.Run(new Form_AdminMain());
+            //Application.Run(new Form_AdminMain());
+            Application.Run(new Form_mainNhanVien());
         }
     }
 }

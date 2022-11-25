@@ -18,15 +18,6 @@ namespace DatGiaoThucAn
             form_dsTaiKhoan1.Hide();
             form_TaiKhoan_Ad1.Hide();
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void form_dsTaiKhoan2_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void bt_DSTaiKhoan_Click(object sender, EventArgs e)
         {
