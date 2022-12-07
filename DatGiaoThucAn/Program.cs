@@ -1,4 +1,5 @@
 using DatGiaoThucAn.NhanVien;
+using DatGiaoThucAn.TaiXe;
 
 namespace DatGiaoThucAn
 {
@@ -14,8 +15,9 @@ namespace DatGiaoThucAn
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new DangNhap());
-            //Application.Run(new Form_AdminMain());
-            Application.Run(new Form_mainNhanVien());
+            //Application.Run(new TaiXe_Main());
+            Application.Run(new Form_AdminMain());
+            //Application.Run(new Form_mainNhanVien());
         }
     }
 }

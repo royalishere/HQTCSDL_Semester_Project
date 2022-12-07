@@ -15,6 +15,7 @@ namespace DatGiaoThucAn
     public partial class Form_DSTaiKhoan : UserControl
     {
         string strCon = @"Data Source=DESKTOP-SDTBD0C\SQLEXPRESS;Initial Catalog=HTDatGiaoThucAn;Integrated Security=True";
+        //string strCon = @"Data Source=HOANGGIA\HOANGGIA;Initial Catalog=HTDatGiaoThucAn;Integrated Security=True";
         SqlConnection sqlCon = null;
 
         public Form_DSTaiKhoan()

@@ -46,8 +46,9 @@
             this.panel1.Controls.Add(this.bt_hdChuaDuyet);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 853);
+            this.panel1.Size = new System.Drawing.Size(166, 562);
             this.panel1.TabIndex = 0;
             // 
             // bt_nvTK
@@ -55,9 +56,10 @@
             this.bt_nvTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_nvTK.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_nvTK.ForeColor = System.Drawing.SystemColors.Control;
-            this.bt_nvTK.Location = new System.Drawing.Point(0, 336);
+            this.bt_nvTK.Location = new System.Drawing.Point(0, 252);
+            this.bt_nvTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_nvTK.Name = "bt_nvTK";
-            this.bt_nvTK.Size = new System.Drawing.Size(190, 85);
+            this.bt_nvTK.Size = new System.Drawing.Size(166, 64);
             this.bt_nvTK.TabIndex = 2;
             this.bt_nvTK.Text = "Tài khoản";
             this.bt_nvTK.UseVisualStyleBackColor = true;
@@ -68,9 +70,10 @@
             this.bt_hdDaDuyet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_hdDaDuyet.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_hdDaDuyet.ForeColor = System.Drawing.SystemColors.Control;
-            this.bt_hdDaDuyet.Location = new System.Drawing.Point(0, 251);
+            this.bt_hdDaDuyet.Location = new System.Drawing.Point(0, 188);
+            this.bt_hdDaDuyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_hdDaDuyet.Name = "bt_hdDaDuyet";
-            this.bt_hdDaDuyet.Size = new System.Drawing.Size(190, 85);
+            this.bt_hdDaDuyet.Size = new System.Drawing.Size(166, 64);
             this.bt_hdDaDuyet.TabIndex = 1;
             this.bt_hdDaDuyet.Text = "Hợp đồng đã duyệt";
             this.bt_hdDaDuyet.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             this.bt_hdChuaDuyet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_hdChuaDuyet.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bt_hdChuaDuyet.ForeColor = System.Drawing.SystemColors.Control;
-            this.bt_hdChuaDuyet.Location = new System.Drawing.Point(0, 166);
+            this.bt_hdChuaDuyet.Location = new System.Drawing.Point(0, 124);
+            this.bt_hdChuaDuyet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_hdChuaDuyet.Name = "bt_hdChuaDuyet";
-            this.bt_hdChuaDuyet.Size = new System.Drawing.Size(190, 85);
+            this.bt_hdChuaDuyet.Size = new System.Drawing.Size(166, 64);
             this.bt_hdChuaDuyet.TabIndex = 0;
             this.bt_hdChuaDuyet.Text = "Hợp đồng chưa duyệt";
             this.bt_hdChuaDuyet.UseVisualStyleBackColor = false;
@@ -92,35 +96,39 @@
             // 
             // form_hD_chuaDuyet1
             // 
-            this.form_hD_chuaDuyet1.Location = new System.Drawing.Point(190, 0);
+            this.form_hD_chuaDuyet1.Location = new System.Drawing.Point(166, 0);
+            this.form_hD_chuaDuyet1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.form_hD_chuaDuyet1.Name = "form_hD_chuaDuyet1";
-            this.form_hD_chuaDuyet1.Size = new System.Drawing.Size(1080, 850);
+            this.form_hD_chuaDuyet1.Size = new System.Drawing.Size(945, 638);
             this.form_hD_chuaDuyet1.TabIndex = 1;
             this.form_hD_chuaDuyet1.Load += new System.EventHandler(this.form_hD_chuaDuyet1_Load);
             // 
             // form_hD_daDuyet1
             // 
-            this.form_hD_daDuyet1.Location = new System.Drawing.Point(190, 0);
+            this.form_hD_daDuyet1.Location = new System.Drawing.Point(166, 0);
+            this.form_hD_daDuyet1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.form_hD_daDuyet1.Name = "form_hD_daDuyet1";
-            this.form_hD_daDuyet1.Size = new System.Drawing.Size(1080, 850);
+            this.form_hD_daDuyet1.Size = new System.Drawing.Size(945, 638);
             this.form_hD_daDuyet1.TabIndex = 2;
             // 
             // form_TaiKhoan_nv1
             // 
-            this.form_TaiKhoan_nv1.Location = new System.Drawing.Point(190, 0);
+            this.form_TaiKhoan_nv1.Location = new System.Drawing.Point(166, 0);
+            this.form_TaiKhoan_nv1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.form_TaiKhoan_nv1.Name = "form_TaiKhoan_nv1";
-            this.form_TaiKhoan_nv1.Size = new System.Drawing.Size(1080, 850);
+            this.form_TaiKhoan_nv1.Size = new System.Drawing.Size(945, 638);
             this.form_TaiKhoan_nv1.TabIndex = 3;
             // 
             // Form_mainNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1262, 853);
+            this.ClientSize = new System.Drawing.Size(1104, 562);
             this.Controls.Add(this.form_TaiKhoan_nv1);
             this.Controls.Add(this.form_hD_daDuyet1);
             this.Controls.Add(this.form_hD_chuaDuyet1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_mainNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhanVien";
