@@ -1,3 +1,4 @@
+using DatGiaoThucAn.KhachHang;
 using DatGiaoThucAn.NhanVien;
 using DatGiaoThucAn.TaiXe;
 
@@ -16,7 +17,8 @@ namespace DatGiaoThucAn
             ApplicationConfiguration.Initialize();
             //Application.Run(new DangNhap());
             //Application.Run(new TaiXe_Main());
-            Application.Run(new Form_AdminMain());
+            Application.Run(new KhachHang_Main());
+            //Application.Run(new Form_AdminMain());
             //Application.Run(new Form_mainNhanVien());
         }
     }

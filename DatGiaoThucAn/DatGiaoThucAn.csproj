@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="KhachHang\" />
+    <Folder Include="DoiTac\" />
   </ItemGroup>
 
 </Project>
