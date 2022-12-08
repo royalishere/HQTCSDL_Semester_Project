@@ -13,9 +13,6 @@ namespace DatGiaoThucAn.NhanVien
 {
     public partial class Form_HD_daDuyet : UserControl
     {
-        //string strCon = @"Data Source=DESKTOP-SDTBD0C\SQLEXPRESS;Initial Catalog=HTDatGiaoThucAn;Integrated Security=True";
-        string strCon = @"Data Source=HOANGGIA;Initial Catalog=HTDatGiaoThucAn;Integrated Security=True";
-        SqlConnection sqlCon = null;
         public Form_HD_daDuyet()
         {
             InitializeComponent();
@@ -23,21 +20,16 @@ namespace DatGiaoThucAn.NhanVien
 
         private void Form_HD_daDuyet_Load(object sender, EventArgs e)
         {
-            if (sqlCon == null)
+            if (UserClass.sqlCon.State == ConnectionState.Closed)
             {
-                sqlCon = new SqlConnection(strCon);
-            }
-
-            if (sqlCon.State == ConnectionState.Closed)
-            {
-                sqlCon.Open();
+                UserClass.sqlCon.Open();
             }
 
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "select * from HopDong where MaHopDong in ( select MaHD from XacNhanHopDong )";
 
-            sqlCmd.Connection = sqlCon;
+            sqlCmd.Connection = UserClass.sqlCon;
 
             SqlDataReader reader = sqlCmd.ExecuteReader();
             while (reader.Read())

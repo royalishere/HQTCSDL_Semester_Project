@@ -14,9 +14,7 @@ namespace DatGiaoThucAn
 {
     public partial class Form_DSTaiKhoan : UserControl
     {
-        //string strCon = @"Data Source=DESKTOP-SDTBD0C\SQLEXPRESS;Initial Catalog=HTDatGiaoThucAn;Integrated Security=True";
-        string strCon = @"Data Source=HOANGGIA\HOANGGIA;Initial Catalog=HTDatGiaoThucAn;Integrated Security=True";
-        SqlConnection sqlCon = null;
+
 
         public Form_DSTaiKhoan()
         {
@@ -25,22 +23,17 @@ namespace DatGiaoThucAn
 
         private void Form_DSTaiKhoan_Load(object sender, EventArgs e)
         {
-            //lấy dữ liệu bảng tài khoản
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
 
-            if (sqlCon.State == ConnectionState.Closed)
+            if (UserClass.sqlCon.State == ConnectionState.Closed)
             {
-                sqlCon.Open();
+                UserClass.sqlCon.Open();
             }
 
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "select * from TaiKhoan";
 
-            sqlCmd.Connection = sqlCon;
+            sqlCmd.Connection = UserClass.sqlCon;
 
             SqlDataReader reader = sqlCmd.ExecuteReader();
             while (reader.Read())
@@ -88,14 +81,10 @@ namespace DatGiaoThucAn
 
         private void bt_updateData_Click(object sender, EventArgs e)
         {
-            if (sqlCon == null)
-            {
-                sqlCon = new SqlConnection(strCon);
-            }
 
-            if (sqlCon.State == ConnectionState.Closed)
+            if (UserClass.sqlCon.State == ConnectionState.Closed)
             {
-                sqlCon.Open();
+                UserClass.sqlCon.Open();
             }
 
             lv_DSTaiKhoan.Items.Clear();
@@ -103,7 +92,7 @@ namespace DatGiaoThucAn
             sqlCmd.CommandType = CommandType.Text;
             sqlCmd.CommandText = "select * from TaiKhoan";
 
-            sqlCmd.Connection = sqlCon;
+            sqlCmd.Connection = UserClass.sqlCon;
 
             SqlDataReader reader = sqlCmd.ExecuteReader();
             while (reader.Read())
