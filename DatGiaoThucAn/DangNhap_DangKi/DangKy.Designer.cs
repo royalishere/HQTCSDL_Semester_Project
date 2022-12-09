@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.title = new System.Windows.Forms.Label();
-            this.tb_username = new System.Windows.Forms.TextBox();
-            this.tb_pass = new System.Windows.Forms.TextBox();
-            this.tb_confPass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.bt_dangKy = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -49,78 +46,53 @@
             this.title.TabIndex = 9;
             this.title.Text = "HỆ THỐNG ĐẶT GIAO THỨC ĂN Ú FOOD";
             // 
-            // tb_username
-            // 
-            this.tb_username.Location = new System.Drawing.Point(218, 147);
-            this.tb_username.Name = "tb_username";
-            this.tb_username.Size = new System.Drawing.Size(220, 27);
-            this.tb_username.TabIndex = 10;
-            // 
-            // tb_pass
-            // 
-            this.tb_pass.Location = new System.Drawing.Point(218, 222);
-            this.tb_pass.Name = "tb_pass";
-            this.tb_pass.Size = new System.Drawing.Size(220, 27);
-            this.tb_pass.TabIndex = 11;
-            // 
-            // tb_confPass
-            // 
-            this.tb_confPass.Location = new System.Drawing.Point(218, 291);
-            this.tb_confPass.Name = "tb_confPass";
-            this.tb_confPass.Size = new System.Drawing.Size(220, 27);
-            this.tb_confPass.TabIndex = 12;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 150);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(156, 144);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(292, 35);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Chọn loại người dùng";
             // 
-            // label2
+            // button1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(123, 222);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 20);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Password";
+            this.button1.Location = new System.Drawing.Point(81, 242);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 74);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Đối tác";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // button2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(66, 294);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 20);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Confirm Password";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.button2.Location = new System.Drawing.Point(258, 242);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 74);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Khách hàng";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // bt_dangKy
+            // button3
             // 
-            this.bt_dangKy.Location = new System.Drawing.Point(254, 377);
-            this.bt_dangKy.Name = "bt_dangKy";
-            this.bt_dangKy.Size = new System.Drawing.Size(122, 38);
-            this.bt_dangKy.TabIndex = 16;
-            this.bt_dangKy.Text = "Đăng ký";
-            this.bt_dangKy.UseVisualStyleBackColor = true;
-            this.bt_dangKy.Click += new System.EventHandler(this.button1_Click);
+            this.button3.Location = new System.Drawing.Point(437, 242);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 74);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Tài xế";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // DangKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 475);
-            this.Controls.Add(this.bt_dangKy);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tb_confPass);
-            this.Controls.Add(this.tb_pass);
-            this.Controls.Add(this.tb_username);
             this.Controls.Add(this.title);
             this.Name = "DangKy";
             this.Text = "DangKy";
@@ -132,12 +104,9 @@
         #endregion
 
         private Label title;
-        private TextBox tb_username;
-        private TextBox tb_pass;
-        private TextBox tb_confPass;
         private Label label1;
-        private Label label2;
-        private Label label3;
-        private Button bt_dangKy;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

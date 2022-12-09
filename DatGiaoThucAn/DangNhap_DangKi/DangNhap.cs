@@ -81,14 +81,22 @@ namespace DatGiaoThucAn
                         Application.Run(new TaiXe_Main());
                         break;
                     }
+                case 5:
+                    {
+                        Application.Run(new DangKy());
+                        break;
+                    }
             }
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            DangKy form_signup = new DangKy();
-            form_signup.StartPosition = FormStartPosition.CenterParent;
-            form_signup.ShowDialog();
+            this.Close();
+
+            user_type = 5;
+            t = new Thread(open_Form);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -131,6 +139,7 @@ namespace DatGiaoThucAn
             }
 
             user_type = Int32.Parse(Loai_tk);
+            UserClass.Ma_actor = Ma_user;
             UserClass.Disconnect();
 
             UserClass.Connection(user_type);
