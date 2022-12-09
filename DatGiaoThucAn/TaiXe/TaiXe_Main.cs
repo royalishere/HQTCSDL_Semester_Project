@@ -57,6 +57,7 @@ namespace DatGiaoThucAn.TaiXe
 
         public void open_DangNhap()
         {
+            UserClass.Disconnect();
             Application.Run(new DangNhap());
         }
         private void button5_Click(object sender, EventArgs e)
