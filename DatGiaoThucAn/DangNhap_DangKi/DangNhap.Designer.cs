@@ -128,7 +128,6 @@
             this.show_btn.TabIndex = 7;
             this.show_btn.UseVisualStyleBackColor = true;
             this.show_btn.Click += new System.EventHandler(this.button3_Click);
-            this.show_btn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button3_MouseClick);
             // 
             // title
             // 

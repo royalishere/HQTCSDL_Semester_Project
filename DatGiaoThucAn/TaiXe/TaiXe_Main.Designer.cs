@@ -55,7 +55,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 453);
+            this.panel1.Size = new System.Drawing.Size(200, 515);
             this.panel1.TabIndex = 0;
             // 
             // button5
@@ -171,14 +171,14 @@
             this.panel_ChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_ChildForm.Location = new System.Drawing.Point(200, 0);
             this.panel_ChildForm.Name = "panel_ChildForm";
-            this.panel_ChildForm.Size = new System.Drawing.Size(724, 453);
+            this.panel_ChildForm.Size = new System.Drawing.Size(735, 515);
             this.panel_ChildForm.TabIndex = 1;
             // 
             // TaiXe_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 453);
+            this.ClientSize = new System.Drawing.Size(935, 515);
             this.Controls.Add(this.panel_ChildForm);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

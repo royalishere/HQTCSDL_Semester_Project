@@ -49,16 +49,17 @@ namespace DatGiaoThucAn
             if(this.pass_textbox.UseSystemPasswordChar)
             {
                 this.pass_textbox.UseSystemPasswordChar = false;
+                this.show_btn.BackgroundImage = new Bitmap(".\\Resources\\eye_2.png");
+
             }
             else
             {
                 this.pass_textbox.UseSystemPasswordChar = true;
+                this.show_btn.BackgroundImage = new Bitmap(Application.StartupPath + "\\Resources\\eye.png");
             }
-        }
-
-        private void button3_MouseClick(object sender, MouseEventArgs e)
-        {
 
         }
+
+        
     }
 }
