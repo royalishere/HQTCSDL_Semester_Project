@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_TT = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,24 +50,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DHDaNhan)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cb_TT
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cb_TT.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cb_TT.FormattingEnabled = true;
+            this.cb_TT.Items.AddRange(new object[] {
             "Đã nhận",
             "Đang giao",
             "Hoàn thành"});
-            this.comboBox1.Location = new System.Drawing.Point(224, 247);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox1.Size = new System.Drawing.Size(220, 29);
-            this.comboBox1.TabIndex = 10;
+            this.cb_TT.Location = new System.Drawing.Point(224, 247);
+            this.cb_TT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cb_TT.Name = "cb_TT";
+            this.cb_TT.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cb_TT.Size = new System.Drawing.Size(220, 29);
+            this.cb_TT.TabIndex = 10;
+            this.cb_TT.SelectedIndexChanged += new System.EventHandler(this.cb_TT_SelectedIndexChanged);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cb_TT);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox4);
@@ -141,6 +142,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Cập nhật";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -277,7 +279,7 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox comboBox1;
+        private ComboBox cb_TT;
         private Label label7;
         private TextBox textBox6;
         private Button button1;
