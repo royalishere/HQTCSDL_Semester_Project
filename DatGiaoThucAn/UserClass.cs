@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
+using Microsoft.EntityFrameworkCore;
+
+//command update database
+//scaffold-dbContext "Server=.\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
+//scaffold-dbContext "Server=.\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
 
 namespace DatGiaoThucAn
 {
@@ -13,8 +18,8 @@ namespace DatGiaoThucAn
     {
         public static SqlConnection sqlCon = new SqlConnection();
         public static string Ma_actor = "";
-        private static string server_name = "DESKTOP-SDTBD0C\\SQLEXPRESS";
-        //private static string server_name = "HOANGGIA\\HOANGGIA";
+        //private static string server_name = "DESKTOP-SDTBD0C\\SQLEXPRESS";
+        private static string server_name = "HOANGGIA\\HOANGGIA";
 
 
         public static void Disconnect()
