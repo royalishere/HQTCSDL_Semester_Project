@@ -86,6 +86,21 @@ namespace DatGiaoThucAn
                 MessageBox.Show("connection fails!");
                 Application.Exit();
             }
+
+        }
+
+        public static DataTable getDataTable(string sql) //Lấy dữ liệu đổ vào bảng
+        {
+            SqlDataAdapter dap = new SqlDataAdapter();
+            dap.SelectCommand = new SqlCommand();
+
+            //Kết nối cơ sở dữ liệu
+            dap.SelectCommand.Connection = UserClass.sqlCon;
+            dap.SelectCommand.CommandText = sql;
+
+            DataTable table = new DataTable();
+            dap.Fill(table);
+            return table;
         }
     }
 }
