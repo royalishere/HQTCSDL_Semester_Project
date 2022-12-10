@@ -61,9 +61,9 @@ namespace DatGiaoThucAn
             if (lv_DSTaiKhoan.SelectedItems.Count > 0)
             {
 
-                string strUser = lv_DSTaiKhoan.SelectedItems[0].SubItems[0].Text;
-                string strPass = lv_DSTaiKhoan.SelectedItems[0].SubItems[1].Text;
-                string strUType = lv_DSTaiKhoan.SelectedItems[0].SubItems[4].Text;
+                string strUser = lv_DSTaiKhoan.SelectedItems[0].SubItems[1].Text;
+                string strPass = lv_DSTaiKhoan.SelectedItems[0].SubItems[2].Text;
+                string strUType = lv_DSTaiKhoan.SelectedItems[0].SubItems[3].Text;
 
                 Username.Text = strUser;
                 Password.Text = strPass;

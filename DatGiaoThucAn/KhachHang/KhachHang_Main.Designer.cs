@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -61,7 +61,7 @@
             // button5
             // 
             this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.LightGreen;
+            this.button5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.button5.FlatAppearance.BorderSize = 2;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -75,11 +75,12 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.LightGreen;
+            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button4.Location = new System.Drawing.Point(0, 280);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 47);
@@ -89,11 +90,12 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.LightGreen;
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Location = new System.Drawing.Point(0, 233);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 47);
@@ -103,11 +105,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.LightGreen;
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Location = new System.Drawing.Point(0, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 47);
@@ -117,11 +120,12 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGreen;
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Location = new System.Drawing.Point(0, 139);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 47);
@@ -131,7 +135,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox1);

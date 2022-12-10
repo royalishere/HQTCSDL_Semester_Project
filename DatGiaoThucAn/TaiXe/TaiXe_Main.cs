@@ -55,7 +55,7 @@ namespace DatGiaoThucAn.TaiXe
             openChildForm(new TaiXe_DHDaNhan());
         }
 
-        public void open_DangNhap()
+        public void DangXuat()
         {
             UserClass.Disconnect();
             Application.Run(new DangNhap());
@@ -63,7 +63,7 @@ namespace DatGiaoThucAn.TaiXe
         private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
-            t = new Thread(open_DangNhap);
+            t = new Thread(DangXuat);
             t.SetApartmentState(ApartmentState.STA);
             t.Start();
         }
