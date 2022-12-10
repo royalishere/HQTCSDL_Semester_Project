@@ -78,7 +78,7 @@ namespace DatGiaoThucAn.TaiXe
 
             cmd.Parameters.Add("@MaDonHang", SqlDbType.Char, 5);
             cmd.Parameters.Add("@MaTX", SqlDbType.Char, 5);
-            cmd.Parameters.Add("@output", SqlDbType.Char, 5).Direction = ParameterDirection.Output;
+            cmd.Parameters.Add("@output", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             cmd.Parameters["@MaDonHang"].Value = dgv_DonHang.CurrentRow.Cells["MaDonHang"].Value.ToString();
             cmd.Parameters["@MaTX"].Value = UserClass.Ma_actor;

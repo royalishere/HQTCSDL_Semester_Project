@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace DatGiaoThucAn.TaiXe
 {
@@ -45,6 +46,63 @@ namespace DatGiaoThucAn.TaiXe
 
             dgv_DHDaNhan.AllowUserToAddRows = false;
             dgv_DHDaNhan.EditMode = DataGridViewEditMode.EditProgrammatically;
+        }
+
+        private void cb_TT_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (table_DonHang.Rows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn đơn hàng");
+                return;
+            }
+
+            if (cb_TT.SelectedItem == null)
+            {
+                MessageBox.Show("Vui lòng chọn tình trạng muốn cập nhật");
+                return;
+            }
+
+            SqlCommand cmd = new SqlCommand("capnhat_tinhtrang", UserClass.sqlCon);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@MaDonHang", SqlDbType.Char, 5);
+            cmd.Parameters.Add("@MaTX", SqlDbType.Char, 5);
+            cmd.Parameters.Add("@TinhTrangGiaoHang", SqlDbType.NVarChar, 30);
+            cmd.Parameters.Add("@output", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            string tinhTrang = "Da nhan";
+
+            switch(cb_TT.SelectedItem.ToString())
+            {
+                case "Đã nhận":
+                    tinhTrang = "Da nhan";
+                    break;
+                case "Đang giao":
+                    tinhTrang = "Dang giao";
+                    break;
+                case "Hoàn thành":
+                    tinhTrang = "Hoan thanh";
+                    break;
+                default: break;
+            }
+
+            cmd.Parameters["@MaDonHang"].Value = dgv_DHDaNhan.CurrentRow.Cells["MaDonHang"].Value.ToString();
+            cmd.Parameters["@MaTX"].Value = UserClass.Ma_actor;
+            cmd.Parameters["@TinhTrangGiaoHang"].Value = tinhTrang;
+            cmd.ExecuteNonQuery();
+
+            int result = Convert.ToInt32(cmd.Parameters["@output"].Value);
+
+            if (result != 1)
+            {
+                MessageBox.Show(Convert.ToString(result));
+            }
+            else MessageBox.Show("Cập nhật thành công");
         }
     }
 }
