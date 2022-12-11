@@ -72,16 +72,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Tổng doanh thu";
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(311, 179);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 36);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Lọc";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             
             // 
@@ -133,7 +123,6 @@
         private Label label1;
         private TextBox textBox3;
         private Label label2;
-        private Button button1;
         private DataGridView dgv_DonHangDN;
     }
 }

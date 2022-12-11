@@ -8,7 +8,6 @@ public partial class HtdatGiaoThucAnContext : DbContext
 {
     public HtdatGiaoThucAnContext()
     {
-        ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
 
     public HtdatGiaoThucAnContext(DbContextOptions<HtdatGiaoThucAnContext> options)
@@ -42,17 +41,17 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
     public virtual DbSet<XacNhanHopDong> XacNhanHopDongs { get; set; }
 
-    public static string server_name = ".\\HOANGGIA";
-    //public static string server_name = ".\\SQLEXPRESS";
+    //public static string server_name = ".\\HOANGGIA";
+    public static string server_name = ".\\SQLEXPRESS";
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=" + server_name + ";Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<ChiTietDonHang>(entity =>
         {
-            entity.HasKey(e => new { e.MaDonHang, e.MaMon }).HasName("PK__ChiTietD__81303637799D9A65");
+            entity.HasKey(e => new { e.MaDonHang, e.MaMon }).HasName("PK__ChiTietD__8130363735BCFE0A");
 
             entity.ToTable("ChiTietDonHang");
 
@@ -106,7 +105,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<CuaHangChiNhanh>(entity =>
         {
-            entity.HasKey(e => new { e.ChiNhanh, e.CuaHang }).HasName("PK__CuaHang___8461CEF47187E62D");
+            entity.HasKey(e => new { e.ChiNhanh, e.CuaHang }).HasName("PK__CuaHang___8461CEF422AA2996");
 
             entity.ToTable("CuaHang_ChiNhanh");
 
@@ -124,7 +123,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<DonHang>(entity =>
         {
-            entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584AD1760CEDA");
+            entity.HasKey(e => e.MaDonHang).HasName("PK__DonHang__129584AD2C3393D0");
 
             entity.ToTable("DonHang");
 
@@ -163,7 +162,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<HopDong>(entity =>
         {
-            entity.HasKey(e => e.MaHopDong).HasName("PK__HopDong__36DD4342ADA5D67F");
+            entity.HasKey(e => e.MaHopDong).HasName("PK__HopDong__36DD43420DAF0CB0");
 
             entity.ToTable("HopDong");
 
@@ -203,7 +202,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<KhachHang>(entity =>
         {
-            entity.HasKey(e => e.MaKh).HasName("PK__KhachHan__2725CF1E573618D4");
+            entity.HasKey(e => e.MaKh).HasName("PK__KhachHan__2725CF1E1367E606");
 
             entity.ToTable("KhachHang");
 
@@ -238,7 +237,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<NhanVien>(entity =>
         {
-            entity.HasKey(e => e.MaNv).HasName("PK__NhanVien__2725D70A89C33394");
+            entity.HasKey(e => e.MaNv).HasName("PK__NhanVien__2725D70A182C9B23");
 
             entity.ToTable("NhanVien");
 
@@ -273,7 +272,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<TaiKhoan>(entity =>
         {
-            entity.HasKey(e => e.MaTk).HasName("PK__TaiKhoan__27250070E71BF64E");
+            entity.HasKey(e => e.MaTk).HasName("PK__TaiKhoan__2725007003317E3D");
 
             entity.ToTable("TaiKhoan");
 
@@ -300,7 +299,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<TaiXe>(entity =>
         {
-            entity.HasKey(e => e.MaTx).HasName("PK__TaiXe__27250045AFA7A0E6");
+            entity.HasKey(e => e.MaTx).HasName("PK__TaiXe__272500451CF15040");
 
             entity.ToTable("TaiXe");
 
@@ -347,7 +346,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<ThongTinDaiDien>(entity =>
         {
-            entity.HasKey(e => e.MaNgDaiDien).HasName("PK__ThongTin__3ADFA7DED2860C28");
+            entity.HasKey(e => e.MaNgDaiDien).HasName("PK__ThongTin__3ADFA7DE7F60ED59");
 
             entity.ToTable("ThongTinDaiDien");
 
@@ -369,7 +368,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<ThongTinDoiTac>(entity =>
         {
-            entity.HasKey(e => e.MaCuaHang).HasName("PK__ThongTin__0840BCA6F5EB286C");
+            entity.HasKey(e => e.MaCuaHang).HasName("PK__ThongTin__0840BCA607F6335A");
 
             entity.ToTable("ThongTinDoiTac");
 
@@ -412,7 +411,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
         modelBuilder.Entity<ThucDon>(entity =>
         {
-            entity.HasKey(e => e.MaMon).HasName("PK__ThucDon__3A5B29A819CB40BA");
+            entity.HasKey(e => e.MaMon).HasName("PK__ThucDon__3A5B29A8276EDEB3");
 
             entity.ToTable("ThucDon");
 
