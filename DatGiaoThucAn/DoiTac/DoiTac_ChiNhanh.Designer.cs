@@ -80,17 +80,16 @@
             // tb_TenChiNhanh
             // 
             this.tb_TenChiNhanh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_TenChiNhanh.Location = new System.Drawing.Point(122, 94);
+            this.tb_TenChiNhanh.Location = new System.Drawing.Point(95, 94);
             this.tb_TenChiNhanh.Name = "tb_TenChiNhanh";
-            this.tb_TenChiNhanh.Size = new System.Drawing.Size(100, 23);
+            this.tb_TenChiNhanh.Size = new System.Drawing.Size(144, 25);
             this.tb_TenChiNhanh.TabIndex = 3;
             // 
             // tb_DiaChi
             // 
-            this.tb_TenChiNhanh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tb_DiaChi.Location = new System.Drawing.Point(502, 94);
+            this.tb_DiaChi.Location = new System.Drawing.Point(433, 94);
             this.tb_DiaChi.Name = "tb_DiaChi";
-            this.tb_DiaChi.Size = new System.Drawing.Size(100, 23);
+            this.tb_DiaChi.Size = new System.Drawing.Size(239, 23);
             this.tb_DiaChi.TabIndex = 4;
             // 
             // button1
@@ -152,9 +151,10 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(730, 146);
+            this.panel1.Size = new System.Drawing.Size(729, 146);
             this.panel1.TabIndex = 9;
             // 
             // panel2
@@ -163,9 +163,10 @@
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Location = new System.Drawing.Point(0, 351);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 350);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(730, 96);
+            this.panel2.Size = new System.Drawing.Size(729, 96);
             this.panel2.TabIndex = 10;
             // 
             // dgv_ChiNhanh

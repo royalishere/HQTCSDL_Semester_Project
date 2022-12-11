@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_1 = new System.Windows.Forms.Panel();
             this.panel_ChildForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -52,7 +53,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.panel_ChildForm);
+            this.panel1.Controls.Add(this.panel_1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -171,21 +172,29 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // panel_1
+            // 
+            this.panel_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_1.Location = new System.Drawing.Point(0, 0);
+            this.panel_1.Name = "panel_1";
+            this.panel_1.Size = new System.Drawing.Size(200, 515);
+            this.panel_1.TabIndex = 1;
+            // 
             // panel_ChildForm
             // 
             this.panel_ChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_ChildForm.Location = new System.Drawing.Point(0, 0);
+            this.panel_ChildForm.Location = new System.Drawing.Point(200, 0);
             this.panel_ChildForm.Name = "panel_ChildForm";
-            this.panel_ChildForm.Size = new System.Drawing.Size(200, 515);
+            this.panel_ChildForm.Size = new System.Drawing.Size(816, 515);
             this.panel_ChildForm.TabIndex = 1;
             // 
             // DoiTac_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 515);
+            this.ClientSize = new System.Drawing.Size(1016, 515);
+            this.Controls.Add(this.panel_ChildForm);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "DoiTac_Main";
             this.Text = "DoiTac_Main";
@@ -207,8 +216,9 @@
         private Button button4;
         private Button button5;
         private Label label1;
-        private Panel panel_ChildForm;
+        private Panel panel_1;
         #endregion
 
+        private Panel panel_ChildForm;
     }
 }

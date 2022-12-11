@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using DatGiaoThucAn.NhanVien;
 using DatGiaoThucAn.KhachHang;
 using DatGiaoThucAn.TaiXe;
+using DatGiaoThucAn.DoiTac;
 
 namespace DatGiaoThucAn
 {
@@ -64,7 +65,7 @@ namespace DatGiaoThucAn
                     }
                 case 1:
                     {
-
+                        Application.Run(new DoiTac_Main());
                         break;
                     }
                 case 2:
