@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_capnhat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tb_MoTa = new System.Windows.Forms.RichTextBox();
             this.bt_ThemMon = new System.Windows.Forms.Button();
@@ -55,6 +56,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bt_capnhat);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tb_MoTa);
             this.panel1.Controls.Add(this.bt_ThemMon);
@@ -68,6 +70,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(912, 235);
             this.panel1.TabIndex = 1;
+            // 
+            // bt_capnhat
+            // 
+            this.bt_capnhat.AutoSize = true;
+            this.bt_capnhat.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bt_capnhat.Location = new System.Drawing.Point(695, 141);
+            this.bt_capnhat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bt_capnhat.Name = "bt_capnhat";
+            this.bt_capnhat.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.bt_capnhat.Size = new System.Drawing.Size(123, 57);
+            this.bt_capnhat.TabIndex = 14;
+            this.bt_capnhat.Text = "Cập nhật";
+            this.bt_capnhat.UseVisualStyleBackColor = true;
+            this.bt_capnhat.Click += new System.EventHandler(this.bt_capnhat_Click);
             // 
             // label2
             // 
@@ -91,7 +107,7 @@
             // 
             this.bt_ThemMon.AutoSize = true;
             this.bt_ThemMon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bt_ThemMon.Location = new System.Drawing.Point(619, 141);
+            this.bt_ThemMon.Location = new System.Drawing.Point(530, 141);
             this.bt_ThemMon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_ThemMon.Name = "bt_ThemMon";
             this.bt_ThemMon.Padding = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -142,12 +158,13 @@
             // dgv_ThucDon
             // 
             this.dgv_ThucDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_ThucDon.Location = new System.Drawing.Point(4, 233);
+            this.dgv_ThucDon.Location = new System.Drawing.Point(1, 231);
             this.dgv_ThucDon.Name = "dgv_ThucDon";
             this.dgv_ThucDon.RowHeadersWidth = 51;
             this.dgv_ThucDon.RowTemplate.Height = 29;
-            this.dgv_ThucDon.Size = new System.Drawing.Size(909, 270);
-            this.dgv_ThucDon.TabIndex = 14;
+            this.dgv_ThucDon.Size = new System.Drawing.Size(912, 268);
+            this.dgv_ThucDon.TabIndex = 15;
+            this.dgv_ThucDon.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_ThucDon_CellContentClick);
             // 
             // DoiTac_ThucDon
             // 
@@ -178,6 +195,7 @@
         private Button bt_ThemMon;
         private Label label2;
         private RichTextBox tb_MoTa;
+        private Button bt_capnhat;
         private DataGridView dgv_ThucDon;
     }
 }

@@ -34,16 +34,24 @@ namespace DatGiaoThucAn.DoiTac
 
             dgv_ThucDon.DataSource = tlb.ToList();
             dgv_ThucDon.AllowUserToAddRows = false;
-            dgv_ThucDon.EditMode = DataGridViewEditMode.EditProgrammatically;
+            //dgv_ThucDon.EditMode = DataGridViewEditMode.EditProgrammatically;
             
             var item = tlb.FirstOrDefault();
             MaCH = item.MaCh;
 
             slMon = Convert.ToInt32(count.ToString());
+
+
         }
 
         private void bt_ThemMon_Click(object sender, EventArgs e)
         {
+            if(dgv_ThucDon.SelectedRows.Count != 0)
+            {
+                MessageBox.Show("Không thể thêm món đã có");
+                return;
+            }
+
             if(tb_TenMon.Text.Length == 0 || tb_MoTa.Text.Length == 0 || tb_GiaBan.Text.Length == 0)
             {
                 MessageBox.Show("Vui long nhap thong tin mon an can them!!");
@@ -91,6 +99,51 @@ namespace DatGiaoThucAn.DoiTac
                 return;
             }
             MessageBox.Show("Them mon thanh cong");
+            tb_TenMon.Clear();
+            tb_GiaBan.Clear();
+            tb_MoTa.Clear();
+        }
+
+        private void bt_capnhat_Click(object sender, EventArgs e)
+        {
+            if (dgv_ThucDon.SelectedRows.Count != 0 )
+            {
+                MessageBox.Show("Chưa chọn món cần cập nhật");
+                return;
+            }
+
+            SqlCommand cmd = new SqlCommand("capnhat_mon", UserClass.sqlCon);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@MaMon", SqlDbType.Char, 5);
+            cmd.Parameters.Add("@MieuTa", SqlDbType.NVarChar, 100);
+            cmd.Parameters.Add("@Gia", SqlDbType.Int);
+            cmd.Parameters.Add("@TinhTrang", SqlDbType.NVarChar, 30);
+            cmd.Parameters.Add("@output", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            cmd.Parameters["@MaMon"].Value = dgv_ThucDon.CurrentRow.Cells[0].Value.ToString();
+            cmd.Parameters["@MieuTa"].Value = tb_MoTa.Text.ToString();
+            cmd.Parameters["@Gia"].Value = Convert.ToInt32(tb_GiaBan.Text.ToString());
+            cmd.Parameters["@TinhTrang"].Value = "Co ban";
+            cmd.ExecuteNonQuery();
+
+            int result = Convert.ToInt32(cmd.Parameters["@output"].Value);
+            if (result != 1)
+            {
+                MessageBox.Show(Convert.ToString(result));
+                return;
+            }
+            else MessageBox.Show("Cap nhat thanh cong");
+            tb_TenMon.Clear();
+            tb_GiaBan.Clear();
+            tb_MoTa.Clear();
+        }
+
+        private void dgv_ThucDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tb_TenMon.Text = dgv_ThucDon.CurrentRow.Cells[1].Value.ToString();
+            tb_GiaBan.Text = dgv_ThucDon.CurrentRow.Cells[4].Value.ToString();
+            tb_MoTa.Text = dgv_ThucDon.CurrentRow.Cells[3].Value.ToString();
         }
     }
 }
