@@ -50,7 +50,7 @@ namespace DatGiaoThucAn.DoiTac
         }
         private void button2_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DoiTac_DSHopDong());
         }
 
         private void button1_Click(object sender, EventArgs e)
