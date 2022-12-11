@@ -22,7 +22,7 @@ namespace DatGiaoThucAn.TaiXe
         {
             string sqlQuery = "select dh.MaDonHang, kh.TenKH, dh.PhiSanPham + dh.PhiVanChuyen as TongPhi," + 
                 " kh.SDT, dh.DCGiaoHang,dh.HinhThucTT from DonHang dh left join KhachHang kh on dh.MaKH =" + 
-                " kh.MaKH where dh.MaDonHang in (select MaDonHang from ChiTietGiaoHang where MaTX = 'TX001'" + 
+                " kh.MaKH where dh.MaDonHang in (select MaDonHang from ChiTietGiaoHang where MaTX = '" + UserClass.Ma_actor + "'" + 
                 " and TinhTrangGiaoHang = 'Hoan Thanh')";
 
             table_DonHang = UserClass.getDataTable(sqlQuery);

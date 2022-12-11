@@ -257,6 +257,7 @@
             this.dgv_DHDaNhan.RowTemplate.Height = 25;
             this.dgv_DHDaNhan.Size = new System.Drawing.Size(833, 290);
             this.dgv_DHDaNhan.TabIndex = 2;
+            this.dgv_DHDaNhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DHDaNhan_CellContentClick);
             // 
             // TaiXe_DHDaNhan
             // 
