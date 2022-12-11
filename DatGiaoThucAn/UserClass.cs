@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 //command update database
 //scaffold-dbContext "Server=.\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
-//scaffold-dbContext "Server=.\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
+//scaffold-dbContext "Server=.\SQLEXPRESS;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
 
 namespace DatGiaoThucAn
 {
