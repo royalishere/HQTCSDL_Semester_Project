@@ -79,7 +79,6 @@
             this.clb_CuaHang.Size = new System.Drawing.Size(220, 376);
             this.clb_CuaHang.TabIndex = 2;
             this.clb_CuaHang.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_CuaHang_ItemCheck);
-            this.clb_CuaHang.SelectedIndexChanged += new System.EventHandler(this.clb_CuaHang_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -126,7 +125,6 @@
             this.clb_ThucDon.Size = new System.Drawing.Size(220, 376);
             this.clb_ThucDon.TabIndex = 3;
             this.clb_ThucDon.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clb_ThucDon_ItemCheck);
-            this.clb_ThucDon.SelectedIndexChanged += new System.EventHandler(this.clb_ThucDon_SelectedIndexChanged);
             // 
             // listView1
             // 
@@ -172,7 +170,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(440, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(439, 271);
+            this.panel3.Size = new System.Drawing.Size(397, 271);
             this.panel3.TabIndex = 2;
             // 
             // label5
@@ -240,7 +238,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(440, 271);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(439, 179);
+            this.panel4.Size = new System.Drawing.Size(397, 179);
             this.panel4.TabIndex = 3;
             // 
             // label7
@@ -295,7 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 450);
+            this.ClientSize = new System.Drawing.Size(837, 450);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -324,6 +322,7 @@
         private Panel panel4;
         private Panel panel5;
         private Label label1;
+        private ListView listView1;
         private Panel panel6;
         private Label label2;
         private CheckedListBox clb_CuaHang;

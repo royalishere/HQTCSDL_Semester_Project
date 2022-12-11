@@ -154,14 +154,14 @@
             this.panel_ChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_ChildForm.Location = new System.Drawing.Point(200, 0);
             this.panel_ChildForm.Name = "panel_ChildForm";
-            this.panel_ChildForm.Size = new System.Drawing.Size(809, 522);
+            this.panel_ChildForm.Size = new System.Drawing.Size(833, 522);
             this.panel_ChildForm.TabIndex = 2;
             // 
             // KhachHang_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 522);
+            this.ClientSize = new System.Drawing.Size(1033, 522);
             this.Controls.Add(this.panel_ChildForm);
             this.Controls.Add(this.panel1);
             this.Name = "KhachHang_Main";
