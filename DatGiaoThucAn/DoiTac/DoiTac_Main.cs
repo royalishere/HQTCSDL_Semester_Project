@@ -34,10 +34,6 @@ namespace DatGiaoThucAn.DoiTac
         {
 
         }
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -55,7 +51,7 @@ namespace DatGiaoThucAn.DoiTac
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DoiTac_ThemHopDong());
         }
 
         public void DangXuat()
@@ -63,7 +59,7 @@ namespace DatGiaoThucAn.DoiTac
             UserClass.Disconnect();
             Application.Run(new DangNhap());
         }
-        private void button6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             this.Close();
             t = new Thread(DangXuat);
