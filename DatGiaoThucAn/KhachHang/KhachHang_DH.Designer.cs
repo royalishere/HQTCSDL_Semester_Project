@@ -324,7 +324,6 @@
         private Panel panel4;
         private Panel panel5;
         private Label label1;
-        private ListView listView1;
         private Panel panel6;
         private Label label2;
         private CheckedListBox clb_CuaHang;
