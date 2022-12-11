@@ -7,21 +7,31 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
 using Microsoft.EntityFrameworkCore;
+using DatGiaoThucAn.Models;
 
 //command update database
 //scaffold-dbContext "Server=.\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
-//scaffold-dbContext "Server=.\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
+//scaffold-dbContext "Server=.\SQLEXPRESS;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -f
 
 namespace DatGiaoThucAn
 {
     internal class UserClass
     {
+        public static HtdatGiaoThucAnContext dbcontext = new HtdatGiaoThucAnContext();
+        
         public static SqlConnection sqlCon = new SqlConnection();
         public static string Ma_actor = "";
         private static string server_name = "DESKTOP-SDTBD0C\\SQLEXPRESS";
         //private static string server_name = "HOANGGIA\\HOANGGIA";
 
-
+        public static void Connect_DbContext()
+        {
+            if(dbcontext.Database.CanConnect())
+            {
+                dbcontext.Database.OpenConnection();
+            }
+        }
+        
         public static void Disconnect()
         {
             if (sqlCon.State == ConnectionState.Open)

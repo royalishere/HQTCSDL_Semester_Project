@@ -28,6 +28,7 @@ namespace DatGiaoThucAn
         private void Form1_Load(object sender, EventArgs e)
         {
             UserClass.Connection(user_type);
+            UserClass.Connect_DbContext();
         }
 
         private void Run_SP_DangNhap()
