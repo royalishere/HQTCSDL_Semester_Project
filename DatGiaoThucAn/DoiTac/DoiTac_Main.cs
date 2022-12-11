@@ -41,12 +41,12 @@ namespace DatGiaoThucAn.DoiTac
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DoiTac_ThucDon());
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new DoiTac_ChiNhanh());
         }
         private void button2_Click(object sender, EventArgs e)
         {

@@ -79,6 +79,7 @@
             // 
             // tb_TenChiNhanh
             // 
+            this.tb_TenChiNhanh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_TenChiNhanh.Location = new System.Drawing.Point(122, 94);
             this.tb_TenChiNhanh.Name = "tb_TenChiNhanh";
             this.tb_TenChiNhanh.Size = new System.Drawing.Size(100, 23);
@@ -86,6 +87,7 @@
             // 
             // tb_DiaChi
             // 
+            this.tb_TenChiNhanh.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tb_DiaChi.Location = new System.Drawing.Point(502, 94);
             this.tb_DiaChi.Name = "tb_DiaChi";
             this.tb_DiaChi.Size = new System.Drawing.Size(100, 23);
@@ -102,6 +104,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -114,6 +117,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -126,6 +130,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Cập nhật";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -138,6 +143,7 @@
             this.button4.TabIndex = 8;
             this.button4.Text = "Lưu";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel1
             // 
