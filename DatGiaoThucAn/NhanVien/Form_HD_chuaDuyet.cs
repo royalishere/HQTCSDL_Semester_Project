@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 
 namespace DatGiaoThucAn.NhanVien
 {
@@ -54,6 +55,42 @@ namespace DatGiaoThucAn.NhanVien
         private void lv_HopDongCD_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_duyet_Click(object sender, EventArgs e)
+        {
+            
+
+            if (lv_HopDongCD.SelectedItems.Count <= 0) 
+            {
+                MessageBox.Show("Vui lòng chọn hợp đồng cần duyệt!");
+                return;
+            }
+
+            SqlCommand cmd;
+
+            cmd = new SqlCommand("Sp_NV_DuyetHopDong", UserClass.sqlCon);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+            cmd.Parameters.Add("@MaHopDong", SqlDbType.Char, 5);
+            cmd.Parameters.Add("@MaNV", SqlDbType.Char, 5);
+            cmd.Parameters.Add("@TinhTrang", SqlDbType.NVarChar, 30);    
+            cmd.Parameters.Add("@output", SqlDbType.Int).Direction = ParameterDirection.Output;
+
+            cmd.Parameters["@MaHopDong"].Value = lv_HopDongCD.SelectedItems[0].SubItems[0].Text;
+            cmd.Parameters["@MaNV"].Value = UserClass.Ma_actor;
+            cmd.Parameters["@TinhTrang"].Value = "Da xac nhan";
+
+            cmd.ExecuteNonQuery();
+
+            int result = Convert.ToInt32(cmd.Parameters["@output"].Value);
+
+            if (result != 1)
+            {
+                MessageBox.Show("Duyệt không thành công" + Convert.ToString(result));
+                return;
+            }
+            else MessageBox.Show("Duyệt thành công");
         }
     }
 }

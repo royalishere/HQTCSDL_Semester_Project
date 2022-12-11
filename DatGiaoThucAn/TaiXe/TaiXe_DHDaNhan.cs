@@ -104,5 +104,21 @@ namespace DatGiaoThucAn.TaiXe
             }
             else MessageBox.Show("Cập nhật thành công");
         }
+
+        private void dgv_DHDaNhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (table_DonHang.Rows.Count == 0)
+            {
+                MessageBox.Show("Không có dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // set giá trị cho các mục            
+            textBox1.Text = dgv_DHDaNhan.CurrentRow.Cells["MaDonHang"].Value.ToString();
+            textBox3.Text = dgv_DHDaNhan.CurrentRow.Cells["TenKH"].Value.ToString();
+            textBox5.Text = dgv_DHDaNhan.CurrentRow.Cells["TongPhi"].Value.ToString();
+            textBox2.Text = dgv_DHDaNhan.CurrentRow.Cells["SDT"].Value.ToString();
+            textBox4.Text = dgv_DHDaNhan.CurrentRow.Cells["HinhThucTT"].Value.ToString();
+        }
     }
 }

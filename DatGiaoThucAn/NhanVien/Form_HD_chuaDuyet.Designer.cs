@@ -135,6 +135,7 @@
             this.bt_duyet.TabIndex = 9;
             this.bt_duyet.Text = "Duyệt";
             this.bt_duyet.UseVisualStyleBackColor = true;
+            this.bt_duyet.Click += new System.EventHandler(this.bt_duyet_Click);
             // 
             // bt_loaibo
             // 

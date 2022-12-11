@@ -224,6 +224,7 @@
             this.dgv_DHDaNhan.RowTemplate.Height = 25;
             this.dgv_DHDaNhan.Size = new System.Drawing.Size(729, 217);
             this.dgv_DHDaNhan.TabIndex = 2;
+            this.dgv_DHDaNhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DHDaNhan_CellContentClick);
             // 
             // TaiXe_DHDaNhan
             // 
@@ -257,8 +258,8 @@
         private Label label2;
         private TextBox textBox1;
         private Label label1;
-        private DataGridView dgv_DHDaNhan;
         private Label label8;
         private TextBox textBox4;
+        private DataGridView dgv_DHDaNhan;
     }
 }
