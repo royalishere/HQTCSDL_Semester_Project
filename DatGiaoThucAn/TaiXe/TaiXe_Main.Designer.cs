@@ -185,9 +185,9 @@
             this.ClientSize = new System.Drawing.Size(935, 515);
             this.Controls.Add(this.panel_ChildForm);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "TaiXe_Main";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "TaiXe_Main";
             this.Load += new System.EventHandler(this.TaiXe_Main_Load);
             this.panel1.ResumeLayout(false);

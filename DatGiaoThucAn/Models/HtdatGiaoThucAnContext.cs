@@ -8,6 +8,7 @@ public partial class HtdatGiaoThucAnContext : DbContext
 {
     public HtdatGiaoThucAnContext()
     {
+        ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
 
     public HtdatGiaoThucAnContext(DbContextOptions<HtdatGiaoThucAnContext> options)
@@ -41,9 +42,11 @@ public partial class HtdatGiaoThucAnContext : DbContext
 
     public virtual DbSet<XacNhanHopDong> XacNhanHopDongs { get; set; }
 
+    public static string server_name = ".\\HOANGGIA";
+    //public static string server_name = ".\\SQLEXPRESS";
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=.\\HOANGGIA;Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true");
+//warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Server=" + server_name + ";Database=HTDatGiaoThucAn;User ID=HT_AD;Password=admin;Trust Server Certificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

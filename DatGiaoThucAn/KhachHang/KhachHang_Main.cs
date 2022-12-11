@@ -16,5 +16,21 @@ namespace DatGiaoThucAn.KhachHang
         {
             InitializeComponent();
         }
+
+        private void openChildForm(Form childForm)
+        {
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel_ChildForm.Controls.Add(childForm);
+            panel_ChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new KhachHang_DH());
+        }
     }
 }
