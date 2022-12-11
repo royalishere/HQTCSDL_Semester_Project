@@ -27,3 +27,11 @@ scaffold-dbContext "Server=<YOUR_SERVER_NAME>;Database=HTDatGiaoThucAn;User ID=H
 ```
 Đồng thời, thay đổi _server_name_ tại `UserClass.cs` theo **SERVER_NAME** của hệ quản trị hệ thống.
 Build Debug và chạy chương trình. Sẽ tốn một ít thời gian để kết nối database trước khi form được mở.
+
+## Thành viên nhóm
+|     Họ và tên        |
+|----------------------|
+| Trương Cao Hoàng Gia |
+|    Phạm Quốc Hùng    |
+|   Nguyễn Nhật Khang  |
+|   Nguyễn Đức Quang   |
