@@ -293,8 +293,8 @@
         private Label label2;
         private TextBox textBox1;
         private Label label1;
-        private DataGridView dgv_DHDaNhan;
         private Label label8;
         private TextBox textBox4;
+        private DataGridView dgv_DHDaNhan;
     }
 }
