@@ -33,7 +33,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.clb_MonAn = new System.Windows.Forms.CheckedListBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(35, 26);
+            this.label1.Location = new System.Drawing.Point(37, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 21);
             this.label1.TabIndex = 1;
@@ -91,23 +91,24 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.clb_MonAn);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(220, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 450);
+            this.panel2.Size = new System.Drawing.Size(248, 450);
             this.panel2.TabIndex = 1;
             // 
-            // listView1
+            // clb_MonAn
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.Window;
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 74);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(220, 376);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.clb_MonAn.CheckOnClick = true;
+            this.clb_MonAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clb_MonAn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clb_MonAn.FormattingEnabled = true;
+            this.clb_MonAn.Location = new System.Drawing.Point(0, 74);
+            this.clb_MonAn.Name = "clb_MonAn";
+            this.clb_MonAn.Size = new System.Drawing.Size(248, 376);
+            this.clb_MonAn.TabIndex = 1;
             // 
             // panel6
             // 
@@ -116,7 +117,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(220, 74);
+            this.panel6.Size = new System.Drawing.Size(248, 74);
             this.panel6.TabIndex = 0;
             // 
             // label2
@@ -126,7 +127,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(44, 26);
+            this.label2.Location = new System.Drawing.Point(57, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 21);
             this.label2.TabIndex = 1;
@@ -135,17 +136,17 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(440, 0);
+            this.panel3.Location = new System.Drawing.Point(468, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(405, 271);
+            this.panel3.Size = new System.Drawing.Size(377, 271);
             this.panel3.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(440, 271);
+            this.panel4.Location = new System.Drawing.Point(468, 271);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(405, 179);
+            this.panel4.Size = new System.Drawing.Size(377, 179);
             this.panel4.TabIndex = 3;
             // 
             // KhachHang_DH
@@ -177,9 +178,9 @@
         private Panel panel4;
         private Panel panel5;
         private Label label1;
-        private ListView listView1;
         private Panel panel6;
         private Label label2;
         private CheckedListBox clb_CuaHang;
+        private CheckedListBox clb_MonAn;
     }
 }

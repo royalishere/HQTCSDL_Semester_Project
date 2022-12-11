@@ -21,8 +21,8 @@ namespace DatGiaoThucAn
         
         public static SqlConnection sqlCon = new SqlConnection();
         public static string Ma_actor = "";
-        private static string server_name = "DESKTOP-SDTBD0C\\SQLEXPRESS";
-        //private static string server_name = "HOANGGIA\\HOANGGIA";
+        //private static string server_name = "DESKTOP-SDTBD0C\\SQLEXPRESS";
+        private static string server_name = "HOANGGIA\\HOANGGIA";
 
         public static void Connect_DbContext()
         {
