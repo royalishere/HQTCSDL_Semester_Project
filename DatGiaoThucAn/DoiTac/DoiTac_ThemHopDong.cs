@@ -16,5 +16,10 @@ namespace DatGiaoThucAn.DoiTac
         {
             InitializeComponent();
         }
+
+        private void bt_LapHopDong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

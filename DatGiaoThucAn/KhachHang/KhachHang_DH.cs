@@ -16,7 +16,6 @@ namespace DatGiaoThucAn.KhachHang
 {
     public partial class KhachHang_DH : Form
     {
-        ThucDon Mon;
         public KhachHang_DH()
         {
             InitializeComponent();

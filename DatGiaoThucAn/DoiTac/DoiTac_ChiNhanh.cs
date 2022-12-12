@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DatGiaoThucAn.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,24 @@ namespace DatGiaoThucAn.DoiTac
 {
     public partial class DoiTac_ChiNhanh : Form
     {
+        string MaCH;
         public DoiTac_ChiNhanh()
         {
             InitializeComponent();
         }
 
-        private void dgv_ChiNhanh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void DoiTac_ChiNhanh_Load(object sender, EventArgs e)
         {
+            var db1 = UserClass.dbcontext.ThongTinDoiTacs.AsNoTracking();
+            var db2 = UserClass.dbcontext.CuaHangChiNhanhs.AsNoTracking();
+            var tlb = from c in db1
+                      join k in db2 on c.MaCuaHang equals k.CuaHang
+                      where c.NgDaiDien == UserClass.Ma_actor
+                      select new { MaCH = c.MaCuaHang, TenCuaHang = c.TenCuaHang, DiaChi = k.DiaChi, ChiNhanh = k.ChiNhanh };
 
+            dgv_ChiNhanh.DataSource = tlb.ToList();
+            dgv_ChiNhanh.AllowUserToAddRows = false;
+            dgv_ChiNhanh.EditMode = DataGridViewEditMode.EditProgrammatically;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,5 +53,6 @@ namespace DatGiaoThucAn.DoiTac
         {
 
         }
+
     }
 }
