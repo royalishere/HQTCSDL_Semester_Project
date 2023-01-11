@@ -1,0 +1,9 @@
+- Phần mềm được sử dụng để thiết kế mô hình ER, quan hệ: DRAW.IO 
+  link: https://app.diagrams.net/
+
+- Phần mềm được sử dụng để thiết kế giao diện: Visual paradigm
+  link: https://online.visual-paradigm.com/infoart/
+
+- Chương trình cài đặt theo dạng Winform (thay đổi theo khả năng của team).
+
+- Sử dụng ngôn ngữ C# với Microsoft Entity Framework Core (7.0), IDE được sử dụng là Microsoft Visual Studio (Community), dủng SQL Server 2019 để lưu trữ dữ liệu.

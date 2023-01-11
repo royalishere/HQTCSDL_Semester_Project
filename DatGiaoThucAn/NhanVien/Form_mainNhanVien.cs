@@ -12,6 +12,7 @@ namespace DatGiaoThucAn.NhanVien
 {
     public partial class Form_mainNhanVien : Form
     {
+        Thread t;
         public Form_mainNhanVien()
         {
             InitializeComponent();
@@ -40,6 +41,19 @@ namespace DatGiaoThucAn.NhanVien
         {
             form_TaiKhoan_nv1.Show();
             form_TaiKhoan_nv1.BringToFront();
+        }
+        public void DangXuat()
+        {
+            UserClass.Disconnect();
+            Application.Run(new DangNhap());
+        }
+        
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            t = new Thread(DangXuat);
+            t.SetApartmentState(ApartmentState.STA);
+            t.Start();
         }
     }
 }

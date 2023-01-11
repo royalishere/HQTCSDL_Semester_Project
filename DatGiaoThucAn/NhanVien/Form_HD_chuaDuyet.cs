@@ -28,7 +28,7 @@ namespace DatGiaoThucAn.NhanVien
 
             SqlCommand sqlCmd = new SqlCommand();
             sqlCmd.CommandType = CommandType.Text;
-            sqlCmd.CommandText = "select * from HopDong where MaHopDong not in ( select MaHD from XacNhanHopDong )";
+            sqlCmd.CommandText = "select * from XacNhanHopDong xn join HopDong hd on xn.MaHD = hd.MaHopDong where TinhTrang not like N'Da xac nhan'";
 
             sqlCmd.Connection = UserClass.sqlCon;
 
@@ -37,14 +37,13 @@ namespace DatGiaoThucAn.NhanVien
             {
                 ListViewItem lvi = new ListViewItem(reader.GetString(0));
                 lvi.SubItems.Add(reader.GetString(1));
-                lvi.SubItems.Add(reader.GetString(2));
-                lvi.SubItems.Add((reader.GetDateTime(3)).ToString());
-                lvi.SubItems.Add((reader.GetDateTime(4)).ToString());
-                lvi.SubItems.Add(reader.GetString(5));
-                lvi.SubItems.Add(reader.GetString(6));
-                lvi.SubItems.Add(reader.GetString(7));
-                lvi.SubItems.Add((reader.GetInt32(8)).ToString());
-                lvi.SubItems.Add((reader.GetInt32(9)).ToString());
+                lvi.SubItems.Add(reader.GetString(3));
+                lvi.SubItems.Add((reader.GetDateTime(7)).ToString());
+                lvi.SubItems.Add((reader.GetDateTime(8)).ToString());
+                lvi.SubItems.Add(reader.GetString(9));
+                lvi.SubItems.Add(reader.GetString(10));
+                lvi.SubItems.Add((reader.GetInt32(12)).ToString());
+                lvi.SubItems.Add((reader.GetInt32(13)).ToString());
 
                 lv_HopDongCD.Items.Add(lvi);
             }
@@ -54,7 +53,18 @@ namespace DatGiaoThucAn.NhanVien
 
         private void lv_HopDongCD_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (lv_HopDongCD.SelectedItems.Count > 0)
+            {
+                ListViewItem lvi = lv_HopDongCD.SelectedItems[0];
+                tb_MaHD.Text = lvi.SubItems[0].Text;
+                tb_maDT.Text = lvi.SubItems[1].Text;
+                tb_tgBD.Text = lvi.SubItems[3].Text;
+                tb_tgKT.Text = lvi.SubItems[4].Text;
+                tb_soTK.Text = lvi.SubItems[5].Text;
+                tb_NH.Text = lvi.SubItems[6].Text;
+                tb_PhiKH.Text = lvi.SubItems[7].Text;
+                tb_PhiHH.Text = lvi.SubItems[8].Text;
+            }
         }
 
         private void bt_duyet_Click(object sender, EventArgs e)
@@ -91,6 +101,15 @@ namespace DatGiaoThucAn.NhanVien
                 return;
             }
             else MessageBox.Show("Duyệt thành công");
+            // refresh listview
+            lv_HopDongCD.Items.Clear();
+            Form_HD_chuaDuyet_Load(sender, e);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            lv_HopDongCD.Items.Clear();
+            Form_HD_chuaDuyet_Load(sender, e);
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.bt_nvTK = new System.Windows.Forms.Button();
             this.bt_hdDaDuyet = new System.Windows.Forms.Button();
             this.bt_hdChuaDuyet = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.bt_nvTK);
             this.panel1.Controls.Add(this.bt_hdDaDuyet);
             this.panel1.Controls.Add(this.bt_hdChuaDuyet);
@@ -50,6 +52,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(166, 562);
             this.panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            this.button5.AutoSize = true;
+            this.button5.BackColor = System.Drawing.SystemColors.Control;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button5.Location = new System.Drawing.Point(23, 354);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(113, 31);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "ĐĂNG XUẤT";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // bt_nvTK
             // 
@@ -133,6 +150,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NhanVien";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -146,5 +164,6 @@
         private Form_HD_chuaDuyet form_hD_chuaDuyet1;
         private Form_HD_daDuyet form_hD_daDuyet1;
         private Form_TaiKhoan_NV form_TaiKhoan_nv1;
+        private Button button5;
     }
 }

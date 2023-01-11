@@ -28,14 +28,14 @@ namespace DatGiaoThucAn.DoiTac
             var db2 = UserClass.dbcontext.ThongTinDoiTacs.AsNoTracking();
 
             var tlb = from c in db1 join k in db2 on c.MaCh equals k.MaCuaHang
-                      where k.NgDaiDien == UserClass.Ma_actor
+                      where k.MaTk == UserClass.Ma_actor
                       select c;
             var count = UserClass.dbcontext.ThucDons.AsNoTracking().Count();
 
             dgv_ThucDon.DataSource = tlb.ToList();
-            dgv_ThucDon.AllowUserToAddRows = false;
+            dgv_ThucDon.ReadOnly = true;
             //dgv_ThucDon.EditMode = DataGridViewEditMode.EditProgrammatically;
-            
+
             var item = tlb.FirstOrDefault();
             MaCH = item.MaCh;
 
@@ -72,7 +72,7 @@ namespace DatGiaoThucAn.DoiTac
                 MaMon = "MA0" + Convert.ToString(slMon);
             }
             else MaMon = "MA00" + Convert.ToString(slMon);
-            SqlCommand cmd = new SqlCommand("them_thucdon", UserClass.sqlCon);
+            SqlCommand cmd = new SqlCommand("them_sua_thucdon", UserClass.sqlCon);
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
             cmd.Parameters.Add("@MaMon", SqlDbType.Char, 5);
@@ -81,7 +81,6 @@ namespace DatGiaoThucAn.DoiTac
             cmd.Parameters.Add("@MieuTaMon", SqlDbType.NVarChar, 100);
             cmd.Parameters.Add("@Gia", SqlDbType.Int);
             cmd.Parameters.Add("@TinhTrang", SqlDbType.NVarChar, 30);
-            cmd.Parameters.Add("@output", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             cmd.Parameters["@MaMon"].Value = MaMon;
             cmd.Parameters["@TenMon"].Value = tb_TenMon.Text.ToString();
@@ -90,14 +89,6 @@ namespace DatGiaoThucAn.DoiTac
             cmd.Parameters["@Gia"].Value = Convert.ToInt32(tb_GiaBan.Text.ToString());
             cmd.Parameters["@TinhTrang"].Value = "Co ban";
             cmd.ExecuteNonQuery();
-
-            int result = Convert.ToInt32(cmd.Parameters["@output"].Value);
-
-            if (result != 1)
-            {
-                MessageBox.Show("Khong the them mon an");
-                return;
-            }
             MessageBox.Show("Them mon thanh cong");
             tb_TenMon.Clear();
             tb_GiaBan.Clear();
@@ -119,21 +110,14 @@ namespace DatGiaoThucAn.DoiTac
             cmd.Parameters.Add("@MieuTa", SqlDbType.NVarChar, 100);
             cmd.Parameters.Add("@Gia", SqlDbType.Int);
             cmd.Parameters.Add("@TinhTrang", SqlDbType.NVarChar, 30);
-            cmd.Parameters.Add("@output", SqlDbType.Int).Direction = ParameterDirection.Output;
 
             cmd.Parameters["@MaMon"].Value = dgv_ThucDon.CurrentRow.Cells[0].Value.ToString();
             cmd.Parameters["@MieuTa"].Value = tb_MoTa.Text.ToString();
             cmd.Parameters["@Gia"].Value = Convert.ToInt32(tb_GiaBan.Text.ToString());
-            cmd.Parameters["@TinhTrang"].Value = "Co ban";
+            cmd.Parameters["@TinhTrang"].Value = dgv_ThucDon.CurrentRow.Cells[5].Value.ToString();
             cmd.ExecuteNonQuery();
 
-            int result = Convert.ToInt32(cmd.Parameters["@output"].Value);
-            if (result != 1)
-            {
-                MessageBox.Show(Convert.ToString(result));
-                return;
-            }
-            else MessageBox.Show("Cap nhat thanh cong");
+            MessageBox.Show("Cap nhat thanh cong");
             tb_TenMon.Clear();
             tb_GiaBan.Clear();
             tb_MoTa.Clear();
